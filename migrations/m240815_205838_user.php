@@ -16,10 +16,10 @@ class m240815_205838_user extends Migration
             'id' => $this->primaryKey()->unsigned(),
             'uid' => $this->string(60)->unique()->notNull(),
             'username' => $this->string(45)->notNull(),
+            'name' => $this->string(50)->notNull(),
             'email' => $this->string(225)->unique()->notNull(),
             'password' => $this->string(60)->notNull(),
-            'status' => $this->integer()->notNull()->defaultValue(0),
-            'contact_email' => $this->boolean()->notNull()->defaultValue(false),
+            'role' => $this->integer()->notNull()->defaultValue(1),
             'contact_phone' => $this->boolean()->notNull()->defaultValue(false),
             'created' => $this->timestamp()->notNull()->defaultExpression('CURRENT_TIMESTAMP'),
             'updated' => $this->timestamp()->notNull()
