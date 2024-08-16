@@ -86,6 +86,18 @@ class SiteController extends Controller
         ]);
     }
 
+    public function actionRegister(){
+        if (!Yii::$app->user->isGuest) {
+            return $this->goHome();
+        }
+
+        
+        return $this->render('register', [
+            
+        ]);
+
+    }
+
     /**
      * Logout action.
      *

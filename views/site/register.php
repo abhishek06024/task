@@ -1,18 +1,20 @@
-<?php
+<?php 
 
 /** @var yii\web\View $this */
-/** @var yii\bootstrap5\ActiveForm $form */
 
-/** @var app\models\LoginForm $model */
 
-use yii\bootstrap5\ActiveForm;
-use yii\bootstrap5\Html;
 
-$this->title = 'Login';
+
+use Yii\helpers\Html;
+use Yii\bootstrap5\ActiveForm;
+
+
+
+
 
 ?>
 <div class="site-login">
-    <h1><?= Html::encode($this->title) ?></h1>
+    <h1><?php Html::encode('Sign Up') ?></h1>
 
     <p>Please fill out the following fields to login:</p>
 
@@ -44,15 +46,3 @@ $this->title = 'Login';
             </div>
 
             <?php ActiveForm::end(); ?>
-
-            <div style="color:#999;">
-             
-            <?php //echo "If no account you can register" ?>
-            <?php echo 'if no account you can ', Html::a('register',['/site/register']);
-                    
-            ?>
-            </div>
-
-        </div>
-    </div>
-</div>

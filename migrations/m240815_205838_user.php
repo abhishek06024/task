@@ -19,7 +19,9 @@ class m240815_205838_user extends Migration
             'name' => $this->string(50)->notNull(),
             'email' => $this->string(225)->unique()->notNull(),
             'password' => $this->string(60)->notNull(),
+            'status' => $this->integer()->notNull()->defaultValue(0),
             'role' => $this->integer()->notNull()->defaultValue(1),
+            'contact_email' => $this->boolean()->notNull()->defaultValue(false),
             'contact_phone' => $this->boolean()->notNull()->defaultValue(false),
             'created' => $this->timestamp()->notNull()->defaultExpression('CURRENT_TIMESTAMP'),
             'updated' => $this->timestamp()->notNull()
